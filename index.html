@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -159,6 +158,7 @@
       <button onclick="window.location.href='https://lenn106.github.io/videos'">Videos</button>
       <button onclick="window.open('https://lenn106.github.io/extras')">Extras</button>
      <button onclick="window.open('https://lenn106.github.io/settings')">Settings</button>
+      <button onclick="window.open('https://www.paypal.com/donate/?business=MPQUFNHHNNU26&amp;no_recurring=0&amp;item_name=Donate+to+the+developer+%28for+no+reason%29&amp;currency_code=USD')">Donate</button>
     </div>
   </div>
   <div class="footer">
@@ -277,8 +277,7 @@
       },
       retina_detect: true,
     });
-  </script>
-  <script>
+
     function handleSearch(event) {
       if (event.key === 'Enter') {
         const searchInput = document.getElementById('searchInput');
@@ -345,20 +344,21 @@
                 searchResults.innerHTML = `No results found for "${searchQuery}".`;
                 searchResults.classList.add('open');
               }
-            } else {
-              searchResults.innerHTML = '';
-              searchResults.classList.remove('open');
             }
           })
           .catch(error => {
-            console.error('Error retrieving blocked words:', error);
+            console.error('Error:', error);
           });
       }
     }
 
     function containsBlockedWords(query, blockedWords) {
-      const words = query.toLowerCase().split(' ');
-      return words.some(word => blockedWords.includes(word));
+      for (let i = 0; i < blockedWords.length; i++) {
+        if (query.includes(blockedWords[i].trim())) {
+          return true;
+        }
+      }
+      return false;
     }
 
     function closeSearchResults() {
@@ -368,3 +368,5 @@
     }
   </script>
 </body>
+
+</html>
