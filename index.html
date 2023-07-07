@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +9,12 @@
 <meta property="og:image" content="https://example.com/path-to-image.jpg">
 <meta property="og:url" content="https://lenn106.github.io">
 <meta property="og:type" content="website">
-
   <style>
     body {
       color: #ffffff;
       font-family: Arial, sans-serif;
       margin: 0;
     }
-
     #particles-js {
       position: fixed;
       width: 100%;
@@ -28,7 +24,6 @@
       background-position: center;
       z-index: -1;
     }
-
     h1 {
       color: #ffffff;
       margin: 0;
@@ -36,14 +31,12 @@
       background-color: #323232;
       text-align: center;
     }
-
     .container {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       height: 80vh; /* Adjust the height value as desired */
     }
-
     .box {
       display: flex;
       flex-direction: column;
@@ -56,7 +49,6 @@
       margin-top: 120px;
       position: relative; /* Added */
     }
-
     .box button {
       margin-bottom: 10px;
       padding: 10px 20px;
@@ -69,17 +61,14 @@
       outline: none;
       transition: background-color 0.3s ease;
     }
-
     .box button:hover {
       background-color: #525252;
     }
-
     .search-bar {
       display: flex;
       align-items: center;
       margin-bottom: 10px;
     }
-
     .search-bar input {
       width: 100%;
       padding: 10px;
@@ -91,7 +80,6 @@
       caret-color: #ffffff;
       outline: none;
     }
-
     .search-results {
       position: absolute;
       top: 100%;
@@ -105,11 +93,9 @@
       display: none;
       z-index: 1; /* Added */
     }
-
     .search-results.open {
       display: block;
     }
-
     .search-results .close-button {
       position: absolute;
       top: 10px;
@@ -123,7 +109,6 @@
       outline: none;
       cursor: pointer;
     }
-
     .footer {
       background-color: #323232;
       height: 100px;
@@ -137,14 +122,12 @@
       color: #ffffff;
       font-size: 14px;
     }
-
     .footer a {
       color: #ffffff;
       text-decoration: none;
     }
   </style>
 </head>
-
 <body>
   <div id="particles-js"></div>
   <h1>Lenn106</h1>
@@ -165,7 +148,6 @@
   <div class="footer">
     <p>All software on this website is open source and free to use, unless otherwise stated. Learn more at <a href="https://unlicense.org/" target="_blank" rel="noopener noreferrer">https://unlicense.org/</a></p>
   </div>
-
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     particlesJS("particles-js", {
@@ -278,13 +260,11 @@
       },
       retina_detect: true,
     });
-
     function handleSearch(event) {
       if (event.key === 'Enter') {
         const searchInput = document.getElementById('searchInput');
         const searchQuery = searchInput.value.toLowerCase();
         const searchResults = document.getElementById('searchResults');
-
         // Define the search result data
         const searchResultData = {
           neomenu: {
@@ -311,6 +291,12 @@
             title: 'Youtube',
             description: 'My Youtube Channel',
             link: 'https://www.youtube.com/@Lenn106'
+          },
+          placeholder: {
+            title: 'Placeholder',
+            description: 'This is a placeholder for the development process. It is useless as of right now.',
+            link: 'https://example.com'
+          },
         };
 
         // Retrieve the blocked words
@@ -318,7 +304,6 @@
           .then(response => response.text())
           .then(data => {
             const blockedWords = data.split(',');
-
             if (searchQuery.trim().length > 0) {
               if (containsBlockedWords(searchQuery, blockedWords)) {
                 searchResults.innerHTML = 'This search contains blocked words.';
@@ -346,7 +331,6 @@
           });
       }
     }
-
     function containsBlockedWords(query, blockedWords) {
       for (let i = 0; i < blockedWords.length; i++) {
         if (query.includes(blockedWords[i].trim())) {
@@ -355,7 +339,6 @@
       }
       return false;
     }
-
     function closeSearchResults() {
       const searchResults = document.getElementById('searchResults');
       searchResults.innerHTML = '';
@@ -363,5 +346,4 @@
     }
   </script>
 </body>
-
 </html>
