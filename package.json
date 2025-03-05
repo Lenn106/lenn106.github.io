@@ -1,0 +1,22 @@
+{
+  "name": "lenn106.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "npx snowpack dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lenn106/lenn106.github.io.git"
+  },
+  "author": "Lenn106",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lenn106/lenn106.github.io/issues"
+  },
+  "homepage": "https://github.com/Lenn106/lenn106.github.io#readme",
+  "dependencies": {
+    "canvas-confetti": "^1.9.3"
+  }
+}
