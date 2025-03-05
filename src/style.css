@@ -42,7 +42,7 @@ body::before {
 
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #0083fe, #005bbf); 
+  background: linear-gradient(180deg, #0253f6 , #005bbf); 
   border-radius: 10px;
   border: 2px solid #121212; 
 }
@@ -103,19 +103,21 @@ body::before {
 
 
 .titlebox i {
-  color: #0083fe;
+  color: #0253f6 ;
   margin-right: 6px; 
 }
-
 .greeting {
+  font-weight: bold;
   font-size: 35px;
   padding: 10px;
-  margin-bottom:15px;
-  color: #0083fe;
+  margin-bottom: 15px;
+  color: transparent;
+  background-image: linear-gradient(to right, #0253f6 , rgb(54, 86, 255));
+  -webkit-background-clip: text;
   text-shadow: 
-    0 0 2px #00a2ff, 
-    0 0 5px #0083fe, 
-    0 0 10px rgba(0, 91, 181, 0.4);
+  0 0 2px rgba(0, 130, 254, 0.4), 
+  0 0 4px rgba(54, 86, 255, 0.3);
+
 }
 
 
@@ -125,7 +127,7 @@ body::before {
 
 .section-content ul li {
   font-size: 22px;
-  color: #0083fe; 
+  color: #0253f6; 
   line-height: 2;
   margin-bottom: 10px;
   text-align: left; 
@@ -144,7 +146,7 @@ body::before {
   max-width: 450px; 
   max-height:80px;
   margin: 40px auto;
-border: 1px solid #0083fe;
+border: 1px solid #0253f6 ;
 transition: box-shadow 0.2s ease-in-out;
 z-index: 999;
 }
@@ -253,7 +255,7 @@ box-shadow: 0 0 8px rgba(54, 86, 255, 0.6);
   padding: 20px; 
   color: white;
   box-shadow: 0 0 6px rgba(54, 86, 255, 0.4);
-  border: 2px solid #0083fe;
+  border: 2px solid #0253f6 ;
   transition: box-shadow 0.2s ease-in-out;
   min-height: 300px; 
   margin-bottom: 30px; 
