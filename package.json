@@ -1,0 +1,22 @@
+{
+  "name": "bio-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "npx snowpack dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lenn106/bio-site.git"
+  },
+  "author": "Lenn106",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lenn106/bio-site/issues"
+  },
+  "homepage": "https://github.com/Lenn106/bio-site#readme",
+  "dependencies": {
+    "canvas-confetti": "^1.9.3"
+  }
+}
