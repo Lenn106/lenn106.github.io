@@ -76,13 +76,6 @@ const songs = [
         song: "./assets/songs/high.mp3"
     },
 
-     {
-        name: "Rights",
-        artists: "Lil Woodward",
-        album: "./assets/img/album/touch.png",
-        song: "./assets/songs/touch (1).mp3"
-    },
-    
     {
         name: "Yes Indeed",
         artists: "Lil Baby, Drake",
